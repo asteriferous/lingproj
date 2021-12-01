@@ -1,0 +1,239 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oswald&display=swap" rel="stylesheet"> 
+  <script>
+    function pronounCtrl($scope) {
+      $scope.prop = {
+        "type": "select",
+        "name": "Pronoun",
+        "values": [{
+          id: 1,
+          'pronoun': "HE PRONOUNS",
+          'title': "Mr.",
+          'copula': "is",
+          'subject': "he", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "his", 
+          'possessivePred': "his", 
+          'object': "him", 
+          'reflexive': "himself", 
+          'parent': "father",
+          'n': "n", 
+          'pib': "uncle", 
+          'nib': "nephew"
+        }, {
+          id: 2,
+          'pronoun': "SHE PRONOUNS",
+          'title': "Ms.",
+          'copula': "is",
+          'subject': "she", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "her", 
+          'possessivePred': "hers", 
+          'object': "her", 
+          'reflexive': "herself", 
+          'parent': "mother", 
+          'n': "n",
+          'pib': "aunt", 
+          'nib': "niece"
+        }, {
+          id: 3,
+          'pronoun': "THEY PRONOUNS",
+          'title': "Mx.",
+          'copula': "are",
+          'subject': "they", 
+          'verb': "", 
+          'finish': "finish",
+          'possessive': "their",
+          'possessivePred': "theirs", 
+          'object': "them", 
+          'reflexive': "themself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 4,
+           'pronoun': "ZE/HIR PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "ze", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "hir", 
+          'possessivePred': "hirs", 
+          'object': "hir", 
+          'reflexive': "hirself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 5,
+          'pronoun': "ZE/ZIR PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "ze", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "zir", 
+          'possessivePred': "zirs", 
+          'object': "zir", 
+          'reflexive': "zirself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 6,
+          'pronoun': "XE PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "xe", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "xer", 
+          'possessivePred': "xers", 
+          'object': "xem", 
+          'reflexive': "xerself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 7,
+          'pronoun': "EY PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "ey", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "eir",
+          'possessivePred': "eirs", 
+          'object': "eir", 
+          'reflexive': "eirself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 8,
+          'pronoun': "KIT PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "kit", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "kits", 
+          'possessivePred': "kits", 
+          'object': "kit", 
+          'reflexive': "kitself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 9,
+          'pronoun': "FAE PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "fae", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "faer", 
+          'possessivePred': "faers", 
+          'object': "faer", 
+          'reflexive': "faerself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling", 
+          'nib': "nibling"
+        }, {
+          id: 10,
+          'pronoun': "IT PRONOUNS",
+          'title': "Mx.",
+          'copula': "is",
+          'subject': "it", 
+          'verb': "s", 
+          'finish': "finishes", 
+          'possessive': "its", 
+          'possessivePred': "its", 
+          'object': "it", 
+          'reflexive': "itself", 
+          'parent': "parent", 
+          'n': "", 
+          'pib': "pibling",  
+          'nib': "nibling"
+        }]
+      };
+      $scope.selected = $scope.prop.values[0]
+
+    }
+  </script>
+  <style>
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: white;
+    color:black;
+  }
+  
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-bottom: 2rem;
+  }
+ 
+  p {
+    font-family: 'Old Standard TT', serif;
+    font-size: 20px;
+    margin-top: 1.5rem;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 7px;
+  }
+  
+  .sent {
+    text-transform:capitalize; 
+    display:inline-block;
+  }
+  
+  .confusion {
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  mark {
+    background-color: lightblue;
+  }
+  
+  </style>
+</head>
+
+<body>
+  <div ng-controller="pronounCtrl">
+    <h1>
+    QUICK-REFERENCE PARAGRAPH
+    </h1>
+    <select ng-model="selected" ng-options="v.pronoun for v in prop.values" class="confusion">
+    </select>
+    <p>
+    <mark>{{selected['title']}}</mark> Alex {{selected['copula']}} currently a student. <span class="sent"><mark>{{selected['subject']}}</mark></span> want{{selected['verb']}} to work as a researcher after <mark>{{selected['subject']}}</mark> {{selected['finish']}} school. <span class="sent"><mark>{{selected['possessive']}}</mark></span> studies are incredibly important to <mark>{{selected['object']}}</mark>. The desk in the corner is <mark>{{selected['possessivePred']}}</mark>. <span class="sent"><mark>{{selected['subject']}}</mark></span> {{selected['copula']}} proud of <mark>{{selected['reflexive']}}</mark> for all of <mark>{{selected['possessive']}}</mark> hard work. <span class="sent"><mark>{{selected['subject']}}</mark></span> hope{{selected['verb']}} to one day be a good <mark>{{selected['parent']}}</mark>, but for now <mark>{{selected['subject']}}</mark> enjoy{{selected['verb']}} being a{{selected['n']}} <mark>{{selected['pib']}}</mark> to <mark>{{selected['possessive']}}</mark> <mark>{{selected['nib']}}</mark>.
+    </p>
+
+  </div>
+
+
+</body>
+
+</html>
